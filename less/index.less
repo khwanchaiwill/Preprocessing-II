@@ -1,1 +1,307 @@
 // Follow the order in the readme
+@import "global.less";
+@import "home-page.less";
+@import "navigation.less";
+@import "reset.less";
+@import "variables.less";
+@import "footer.less";
+@import "mixins.less";
+// Theme variables Here
+
+@main-color: @specific-red;
+@accent-color: @blizzard-blue;
+
+@specific-red: crimson;
+@blizzard-blue: #96EEEB;
+
+@font-stack: Arial, "sans-serif";
+@main-font: 'DM Mono', monospace;
+@second-font: 'Roboto', sans-serif;
+
+@mobile: ~'( max-width: 530px ) ';
+@sm-phone: ~'( max-width: 400px )';
+// Mixins
+
+.display-centre(@justify, @align){
+    display: flex;
+    flex-direction:row;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.display-wrap(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.column(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.phone-bgcolor(){
+    
+            background-color: #eee9cc;
+            font-size: 1.3rem;
+
+    }
+
+body{ 
+    
+    header{
+        
+        .display-wrap();
+        
+        margin: 2.5% 4%;
+
+        @media @mobile{
+            .display-centre(@justify, @align){
+                width: 100%;
+            }                     
+        }
+            
+        h1{
+            border-radius: 5%;
+            .anime2();
+            .anime2key();
+            .link();
+                width: 30%;
+
+                @media @mobile{
+                    width: 100%;
+                    text-align: center;
+                    font-size: @font6;
+                }             
+            }
+
+        nav{
+                padding: 0 2%;
+                width: 50%;
+
+            .display-wrap();              
+
+                align-content: center; 
+                    
+                    @media @mobile{
+                        .display-wrap();
+                        width: 100%;
+                    } 
+
+            a{
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.3rem;
+                text-decoration: none; 
+                color: black; 
+                .anime3();
+                .anime3key();
+                
+                @media @mobile{
+                    font-size: @font7;
+                    color: black;
+                }                
+            }           
+        } 
+    } 
+
+    .pics{
+        border-top: 3px dashed @silver;     
+
+        .display-wrap();
+            .bus{
+                .column();
+                    width: 80%;
+
+                @media @mobile{
+                    width: 90%;
+                } 
+                
+                img{
+                    width: 100%;
+                } 
+            }
+           
+            h1{
+                margin-top: 1.5%;
+                width: 80%;
+
+                .link();
+                align-content: flex-start;
+
+                    @media @mobile{
+                        width: 90%;
+                        font-size: @font6;
+                    }                              
+            } 
+
+            p{
+                margin: 1.5% 0;
+                line-height: 1.6;
+                font-size: @font1;
+                width: 80%;
+                font-family: @main-font; 
+                    
+                @media @mobile{
+                    width: 90%;
+                    font-size: @font5;
+                    margin-bottom: 2%;                   
+                }
+            } 
+    } 
+
+    .home{
+        border-top: 3px dashed @silver;
+        width: 80%;
+
+        .display-wrap();
+        
+        @media @mobile{
+            margin-top: 1.5%;
+            width: 90%;            
+            border: 1.5px dasehd @silver;
+
+            .display-wrap();
+
+        }
+            
+        .content-section{
+
+            @media @mobile{
+                width: 100%;
+                margin: 0;
+            }
+
+            .text-content{                
+                justify-content: space-around;
+
+                @media @mobile{
+                    width: 100%;
+                }
+
+                h2{      
+                    padding-top: @font1;              
+                    .link();
+                    font-size: @font2;
+                    @media @mobile{
+                        font-size: @font6;
+                        margin-bottom: 1.5%;
+                    }
+                }
+
+                p{
+                    line-height: 1.7;
+                    width: 100%;
+                    font-size: @font4;
+                    font-family: @second-font; 
+                        
+                    @media @mobile{
+                        font-size: @font5;
+                    }                   
+                }       
+            }       
+        }      
+
+            .img-content{
+                padding: @font1 0;
+                .display-centre();
+                justify-content: flex-end; 
+            } 
+
+            .content-destination{
+                
+                margin-top: 2%;
+
+                @media @mobile{
+                    margin-top: 1.6%;
+                }
+
+                h2{
+                    justify-content: flex-start;
+                    .link();
+                    margin: 1.5% 0;
+
+                    @media @mobile{
+                        font-size: @font4;
+                    } 
+                }
+
+                p{
+                    letter-spacing: 1;
+                    width: 100%;
+                    line-height: 1.5rem;
+                    margin-bottom: 1.5%;
+                    padding-right: 0%;
+                    font-size: @font7;
+
+                    @media @tablet{
+                        font-size: @font4;
+                    }  
+                }
+
+                img{
+                    width: 100%;
+                }                
+            }
+        
+        .content-pick{
+            
+            .display-centre(center, space-evenly);   
+            
+                @media @mobile{
+                    width: 85%;
+                    .display-wrap();
+                }
+
+            .destination{
+                
+                h4{
+                    .link();
+                    font-size: @font3;  
+                    margin: 1.5% 0;   
+                    
+                    @media @mobile{
+                        font-size: @font4;                    
+                    }                    
+                }
+
+                p{
+                    padding-right: @font2;
+                    font-size: @font4;
+                    line-height: 1.5;
+                    margin-bottom: 1.7%;
+
+                    @media @mobile{
+                        font-size: @font7;
+                    }
+                }
+                
+                .btn{
+                    .anime1();
+                    .anime1key();
+                    .button();
+
+                    @media @mobile{
+                        width: 100%;
+                        background-color: @eastern-blue;
+                        font-size: @font7;
+                        margin-bottom: 0;
+                    }                    
+                }
+            }  
+        }            
+    }
+
+    .footer{
+
+        .anime1();
+        .anime1key();
+        @media @mobile{
+            
+            p{
+                font-size: @font7;
+            }
+        }  
+    }
+}
