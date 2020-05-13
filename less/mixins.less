@@ -1,1 +1,63 @@
 // Mixins in here
+
+.display-centre(){
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.display-wrap(){
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.colum(){
+    display: flex;
+    flex-direction: column;
+    background-color: #1f7ca6;
+}
+.phone(){
+    font-family:'Indie Flower', cursive; 
+    font-size: 1.5rem;
+}
+.anime1(){
+    animation-name: color;
+    animation-duration: 15s;
+}
+.anime1key(){
+    @keyframes color{
+        0% {background-color: rgb(144, 243, 78);}
+        25% {background-color: rgb(94, 188, 243);}
+        50% {background-color: blue;}
+        75% {background-color: blueviolet;}
+        100% {background-color: cyan;}
+        
+    }
+}
+.anime2(){
+    animation-name: font-size;
+    animation-duration: 10s;
+}
+.anime2key(){
+    @keyframes font-size{      
+        0% { background-color: red;font-size: 1.5rem;}
+        25% {background-color: rgb(84, 72, 241); font-size: 2.5rem;}
+        50% {background-color: palevioletred; font-size: 3.5rem;}
+        100% {background-color: rgb(81, 255, 0); font-size: 4.5rem;}
+    }
+}
+
+.anime3(){
+    animation-name: newfont;
+    animation-duration: 10s;
+}
+.anime3key(){
+    @keyframes newfont{      
+        0% { color:  #ff00dd; font-size:  1.5rem;}
+        25% {color:  #97084f; font-size: 2.5rem;}
+        50% {color: #5227b6; font-size: 3.5rem;}
+        100% {color: #f3aeea; font-size: 4.5rem;}
+    }
+}
+
+
